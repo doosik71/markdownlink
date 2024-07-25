@@ -14,8 +14,8 @@ export function activate(context: vscode.ExtensionContext) {
 
             // Convert to markdown link
             const sanitizedFileName = selectedText
-                .replace(/ /g, '_') // Replace spaces with underscores
-                .replace(/[^\w_]/g, ''); // Remove special characters
+            .replace(/[^\w가-힣]+/g, '_')  // Replace non-word characters except Hangul with underscores
+            .replace(/_+/g, '_');  // Reduce multiple underscores to a single underscore
 
             const markdownLink = `[${selectedText}](${sanitizedFileName}.md)`;
 

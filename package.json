@@ -1,14 +1,21 @@
 {
-  "name": "@doosik71/markdown-link",
+  "name": "markdown-link",
   "displayName": "Markdown Link",
   "description": "A VS Code extension to convert selected text to a markdown link",
   "version": "0.0.1",
-  "publisher": "your-name",
+  "publisher": "Doosik Kim",
+  "repository": {
+      "type": "git",
+      "url": "https://github.com/doosik71/markdownlink"
+  },
   "engines": {
       "vscode": "^1.50.0"
   },
   "categories": [
       "Other"
+  ],
+  "activationEvents": [
+      "onCommand:extension.toMarkdownLink"
   ],
   "main": "./out/extension.js",
   "contributes": {
