@@ -1,48 +1,48 @@
 {
-  "name": "markdown-link",
-  "displayName": "Markdown Link",
+  "name": "markdown-link-file",
+  "displayName": "Markdown Link File",
   "description": "A VS Code extension to convert selected text to a markdown link",
   "version": "0.0.1",
   "publisher": "Doosik Kim",
   "repository": {
-      "type": "git",
-      "url": "https://github.com/doosik71/markdownlink"
+    "type": "git",
+    "url": "https://github.com/doosik71/markdownlink"
   },
   "engines": {
-      "vscode": "^1.50.0"
+    "vscode": "^1.50.0"
   },
   "categories": [
-      "Other"
+    "Other"
   ],
-  "activationEvents": [
-      "onCommand:extension.toMarkdownLink"
-  ],
+  "activationEvents": [],
   "main": "./out/extension.js",
   "contributes": {
-      "commands": [
-          {
-              "command": "extension.toMarkdownLink",
-              "title": "Convert to Markdown Link"
-          }
-      ]
+    "commands": [
+      {
+        "command": "extension.toMarkdownLinkFile",
+        "title": "Convert to Markdown Link File"
+      }
+    ]
   },
   "scripts": {
-      "vscode:prepublish": "npm run compile",
-      "compile": "tsc -p ./",
-      "watch": "tsc -watch -p ./",
-      "pretest": "npm run compile && npm run lint",
-      "lint": "eslint src --ext ts",
-      "test": "node ./out/test/runTest.js"
+    "vscode:prepublish": "npm run esbuild",
+    "esbuild": "esbuild src/extension.ts --bundle --outdir=out --platform=node --external:vscode",
+    "watch": "esbuild src/extension.ts --bundle --outdir=out --platform=node --external:vscode --watch",
+    "pretest": "npm run esbuild && npm run lint",
+    "lint": "eslint src --ext ts",
+    "test": "node ./out/test/runTest.js"
   },
   "devDependencies": {
-      "@types/glob": "^7.1.3",
-      "@types/mocha": "^8.0.4",
-      "@types/node": "^14.14.6",
-      "@types/vscode": "^1.50.0",
-      "eslint": "^7.11.0",
-      "glob": "^7.1.6",
-      "mocha": "^8.2.1",
-      "typescript": "^4.0.3",
-      "vscode-test": "^1.4.0"
+    "@types/glob": "^7.1.3",
+    "@types/mocha": "^8.0.4",
+    "@types/node": "^14.14.6",
+    "@types/vscode": "^1.50.0",
+    "esbuild": "^0.23.0",
+    "eslint": "^7.11.0",
+    "glob": "^7.1.6",
+    "mocha": "^10.7.0",
+    "ts-loader": "^9.5.1",
+    "typescript": "^4.0.3",
+    "vscode-test": "^1.4.0"
   }
 }

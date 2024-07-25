@@ -1,9 +1,9 @@
 import * as vscode from 'vscode';
 
 export function activate(context: vscode.ExtensionContext) {
-    console.log('Your extension "markdownLink" is now active!');
+    console.log('Your extension "markdownLinkFile" is now active!');
 
-    let disposable = vscode.commands.registerCommand('extension.toMarkdownLink', () => {
+    let disposable = vscode.commands.registerCommand('extension.toMarkdownLinkFile', () => {
         const editor = vscode.window.activeTextEditor;
         if (editor) {
             const document = editor.document;

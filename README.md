@@ -19,15 +19,11 @@ Markdown Link is a Visual Studio Code extension that converts the selected text 
 1. Select the text you want to convert to a Markdown link.
 2. Open the Command Palette (`Ctrl+Shift+P` or `Cmd+Shift+P` on macOS).
 3. Run the command `Convert to Markdown Link`.
-4. The selected text will be replaced with a Markdown link in the format `[Selected Text](file_name.md)`.
-
-## Example
-
-If you select the text `This is my link` and run the command, it will be converted to `[This is my link](This_is_my_link.md)`.
+4. The selected text will be replaced with a Markdown link.
 
 ## Installation
 
-1. Download the `.vsix` file from the [Releases](https://github.com/doosik71/markdownlink) page.
+1. Download the `.vsix` file from the [Releases](https://github.com/doosik71/markdownlink/releases) page.
 2. Open Visual Studio Code.
 3. Open the Command Palette (`Ctrl+Shift+P` or `Cmd+Shift+P` on macOS).
 4. Select `Extensions: Install from VSIX...`.
